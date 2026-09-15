@@ -4,6 +4,14 @@
 
 Interactive mascot based on the supplied robot drawing, using [page-mascot](https://koboyo.com/page-mascot).
 
+## Video demo
+
+[![Watch the Nozomi mascot video demo](public/demo/nozomi-mascot-poster.jpg)](https://gabeperez.github.io/nozomi-mascot/demo/nozomi-mascot.mp4)
+
+[Watch the video demo](https://gabeperez.github.io/nozomi-mascot/demo/nozomi-mascot.mp4) · [Try the interactive demo](https://gabeperez.github.io/nozomi-mascot/)
+
+## Run locally
+
 Run `bun install` then `bun run dev`. Production build: `bun run build`.
 
 - `public/mascots/`: aligned WebP atlases ready for React.
