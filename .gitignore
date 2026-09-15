@@ -32,3 +32,10 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Never commit wallet credentials or local investigation checkouts.
+*.key
+*.keystore
+*.keystore.aliases
+exploration/prime-machin-source/
+deployments/testnet-publish.json
