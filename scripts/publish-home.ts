@@ -28,6 +28,9 @@ await cp("dist/home/index.html", join(out, "index.html"));
 await mkdir(join(out, "mascots"), { recursive: true });
 for (const file of ["nozomi-directions.webp", "nozomi-reactions.webp"])
   await cp("public/mascots/" + file, join(out, "mascots", file));
+await cp("public/mascots/prime-1541", join(out, "mascots/prime-1541"), {
+  recursive: true,
+});
 await writeFile(join(out, "ws-resources.json"), resources);
 const args = [
   "/Users/gabe/.local/bin/nozomi-site-builder",

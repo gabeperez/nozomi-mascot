@@ -7,6 +7,7 @@
       "dependencies": {
         "@mysten/dapp-kit-core": "^1.6.28",
         "@mysten/dapp-kit-react": "^2.1.30",
+        "@mysten/kiosk": "^1.4.11",
         "@mysten/sui": "^2.31.1",
         "fflate": "^0.8.3",
         "page-mascot": "^0.1.0",
@@ -59,6 +60,8 @@
     "@mysten/dapp-kit-core": ["@mysten/dapp-kit-core@1.6.28", "", { "dependencies": { "@floating-ui/dom": "^1.8.0", "@lit-labs/scoped-registry-mixin": "^1.0.4", "@lit/task": "^1.0.3", "@mysten/slush-wallet": "^1.2.3", "@mysten/utils": "^0.4.1", "@mysten/wallet-standard": "^0.21.25", "@nanostores/lit": "^0.2.3", "@wallet-standard/ui": "^1.0.3", "@wallet-standard/ui-registry": "^1.1.1", "@webcomponents/scoped-custom-element-registry": "^0.0.10", "lit": "^3.3.3", "nanostores": "^1.4.2" }, "peerDependencies": { "@mysten/sui": "^2.31.1" } }, "sha512-WJL3hbJS5ZdXCUcgpDVMnKddPztL8wqoGpA+zZjPdDhhjY++Hllc1xAmvYBbQzMQkMc/fKdYpnaeyXnH03kBfg=="],
 
     "@mysten/dapp-kit-react": ["@mysten/dapp-kit-react@2.1.30", "", { "dependencies": { "@lit/react": "^1.0.8", "@mysten/dapp-kit-core": "^1.6.28", "@nanostores/react": "^1.0.0", "nanostores": "^1.4.2" }, "peerDependencies": { "@types/react": ">=17.0.0", "react": ">=17.0.0" } }, "sha512-QA3YZQS9/CyXQ0Sw3WEwbagtA38K4PQlQcQi01mY4NzWkRd99gxGHP9ElUc9aTwJjOK1PIxyUiHOCT8DETdYhA=="],
+
+    "@mysten/kiosk": ["@mysten/kiosk@1.4.11", "", { "dependencies": { "@mysten/bcs": "^2.1.1" }, "peerDependencies": { "@mysten/sui": "^2.31.1" } }, "sha512-8kl/ylpQWtInfizO5qkgfUUqi2NcO3rH7xHQJpF8TtF5dc1VkB1evYjNRVtC+9CdBFGNhWkXL3+SsQr+zr4VlQ=="],
 
     "@mysten/slush-wallet": ["@mysten/slush-wallet@1.2.3", "", { "dependencies": { "@mysten/utils": "^0.4.1", "@mysten/wallet-standard": "^0.21.25", "@mysten/window-wallet-core": "^0.3.0", "valibot": "^1.4.2" }, "peerDependencies": { "@mysten/sui": "^2.31.1" } }, "sha512-es+Cm/a48TzaRTxz0b77SNPpoK+UdazXbkR7tnl+Srq/CZajoAFupgyXoxjHEvdR5yHdh3o13uNKZP//SNiI1Q=="],
 

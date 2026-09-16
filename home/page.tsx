@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Mascot } from "page-mascot";
 import { client, parseCharacter, colors, type Character } from "../test/config";
 import "./style.css";
+import { PrimeHome } from "./prime";
 const studio = "https://gabeperez.github.io/nozomi-mascot/test/";
 function Home() {
   const [c, setC] = useState<Character>(),
@@ -125,4 +126,10 @@ function Home() {
     </main>
   );
 }
-createRoot(document.getElementById("root")!).render(<Home />);
+createRoot(document.getElementById("root")!).render(
+  new URLSearchParams(location.search).get("prime") === "1541" ? (
+    <PrimeHome />
+  ) : (
+    <Home />
+  ),
+);

@@ -1,0 +1,89 @@
+{
+  "objectId": "0x396a29857be19beb3131e23d90b059d180bf938ea35d6c4ad19114e58deaced5",
+  "version": "708451568",
+  "digest": "5dk8FFM6jB3Jge1yDnWLx7xtELUtGjmQoBkChgy3LDEA",
+  "owner": {
+    "$kind": "ObjectOwner",
+    "ObjectOwner": "0x5b540df2b45a7b70b9873efe616e8070a204aee2241e89477aaec2326fcefc22"
+  },
+  "type": "0x034c162f6b594cb5a1805264dd01ca5d80ce3eca6522e6ee37fd9ebfb9d3ddca::factory::PrimeMachin",
+  "json": {
+    "attributes": {
+      "data": {
+        "aura": "none",
+        "background": "white",
+        "clothing": "white-hoodie",
+        "decal": "racing-stripe",
+        "headwear": "ice-cream-head",
+        "highlight": "white",
+        "internals": "white",
+        "mask": "kitsune",
+        "screen": "tamashi-eyes",
+        "skin": "pink"
+      },
+      "id": "0x896889ad002a4b3b242b1580d2ea855e486961ba0853b4db20cb920df58a1b54",
+      "number": 1541
+    },
+    "id": "0x396a29857be19beb3131e23d90b059d180bf938ea35d6c4ad19114e58deaced5",
+    "image": {
+      "chunks": {
+        "contents": [
+          {
+            "key": "2e3dc31d5e1a546dd4574c321acd2bb98ace2469bf6f83c956d759f11f82cb2d",
+            "value": "0x3c913b3943cb2257ab6bea2887c1d1fa1ef0b5f39aef8d4dc2ea399d22de8ca9"
+          },
+          {
+            "key": "7ac49454f58fbe90c1fec54592a4b98aa6f826824f5bbed2bd9bc752a0cba998",
+            "value": "0x36d1c7c1cdde4d10fe60765059966288ac68014e8a3094a105a733fca57a5979"
+          },
+          {
+            "key": "7e33c7aaf2e68efea839c9b82a9cc7d91bf19a024ef00ab71313125d9ec27635",
+            "value": "0xd35da7bd6d328e69cfbae98043f9e76ca0030c0d34dbfd2a9cb578f4397f3f0c"
+          },
+          {
+            "key": "2c6f57eecbed3c61362e38776a2ae2a722f5611b74b94166690be9a6b238d7bc",
+            "value": "0xfbffa3b067fefcd5dd5034768a50674058c59de7681c03dd0b92be5c47bce403"
+          },
+          {
+            "key": "833fedd0bb91b60ca19b438f6ec4159633d6ac4272d8161c53f0360eb6b04227",
+            "value": "0x6ad94aa7babeadc59374c8e5b384d973034fdaccaf8c60e457336f82a4f3c5a6"
+          },
+          {
+            "key": "eda34c570e08434033faf3240b7833f680d4db94a33ec6516f5b214234d11b33",
+            "value": "0x13f6d397b7e60e27ed378dbdd171922c9d5e719ceabdae05bdc6d9137aaf7b92"
+          },
+          {
+            "key": "8b21a49f720a5f01c44ae12af9ee90ecfe10d2bd3193c5d5e252931a23c13b5c",
+            "value": "0x84689759df748acf0faa865ae3511d04b581dd7bbd5f25de62a7ff33ed5e0f0e"
+          },
+          {
+            "key": "2b88fe0665acbdcb2fdcb2d19c21ea974289cdab72433d6848dce9d9ca15ba7c",
+            "value": "0xdbce3500809ba38291f502d20739b5577f297126aea84260915ab064c8411362"
+          }
+        ]
+      },
+      "created_with": "0x96984444ca52e93c948ab05d043367dfa4ea02e576ae07eec52dbc24d3b6d7a1",
+      "encoding": "base85",
+      "extension": "avif",
+      "id": "0x8dccfedb82ce009c32467097bfef74b71d7275c4c7da1e1b2ab3089ef9095c6d",
+      "level": 1,
+      "mime_type": "image/avif",
+      "number": 1541
+    },
+    "kiosk_id": "0xa9b88e1fa925aa0975db5c59f92ffa0682ab691a973bd8654052ec956c4262cc",
+    "kiosk_owner_cap_id": "0x8ec336f103498432a85f114138bb897dbc3718d231d2105c30e0d11c655807d8",
+    "lvl1_colored_by": "0x40cdfd49d252c798833ddb6e48900b4cd44eeff5f2ee8e5fad76b69b739c3e62",
+    "lvl2_colored_by": null,
+    "minted_by": "0x40cdfd49d252c798833ddb6e48900b4cd44eeff5f2ee8e5fad76b69b739c3e62",
+    "number": 1541,
+    "rarity": {
+      "data": {
+        "class": "rare",
+        "rank": 794,
+        "score": "1339015"
+      },
+      "id": "0x010e46f48fd8ac3b6b1b62ff7af4d04dc2e6ceb73ce44f3cbcdae4afc4f7a872",
+      "number": 1541
+    }
+  }
+}

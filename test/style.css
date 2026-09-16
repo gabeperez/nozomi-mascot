@@ -410,3 +410,4 @@ textarea:focus-visible {
   }
 }
 .home-link{text-align:center;text-decoration:none}.controls>.downloads{margin-top:20px}
+.original-machin{width:100%;max-width:350px;aspect-ratio:1;object-fit:contain;border-radius:14px;margin:28px 0}.verification-message{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.6}summary{font-size:11px;cursor:pointer}

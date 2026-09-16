@@ -16,6 +16,7 @@
   "dependencies": {
     "@mysten/dapp-kit-core": "^1.6.28",
     "@mysten/dapp-kit-react": "^2.1.30",
+    "@mysten/kiosk": "^1.4.11",
     "@mysten/sui": "^2.31.1",
     "fflate": "^0.8.3",
     "page-mascot": "^0.1.0",

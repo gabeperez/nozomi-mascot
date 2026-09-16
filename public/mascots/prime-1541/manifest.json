@@ -1,0 +1,25 @@
+{
+  "number": 1541,
+  "originalObjectId": "0x396a29857be19beb3131e23d90b059d180bf938ea35d6c4ad19114e58deaced5",
+  "imageId": "0x8dccfedb82ce009c32467097bfef74b71d7275c4c7da1e1b2ab3089ef9095c6d",
+  "sourceVersion": "708451568",
+  "attributes": {
+    "aura": "none",
+    "background": "white",
+    "clothing": "white-hoodie",
+    "decal": "racing-stripe",
+    "headwear": "ice-cream-head",
+    "highlight": "white",
+    "internals": "white",
+    "mask": "kitsune",
+    "screen": "tamashi-eyes",
+    "skin": "pink"
+  },
+  "status": "artwork-preview",
+  "interpretation": "AI-assisted companion interpretation; not official collection artwork. Public viewing is not ownership verification.",
+  "files": {
+    "avatar.webp": "e81e0db23626affc0858c4bf45025a43a49f7f9a337dfc981ed3ae6d13f64fcd",
+    "full-body.webp": "cec8a773219c2b70f9e927627b471251f19d2a746d2fc6af2e82092ab2970676",
+    "original.webp": "3b035acc134e4d12fc64eb27e962d84b23b5a98b8c36ba1e0846f2ce6f698cf7"
+  }
+}

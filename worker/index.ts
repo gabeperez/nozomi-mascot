@@ -1,3 +1,5 @@
+import { verifyPrime, validAddress, mainnet } from "../server/prime-ownership";
+import { verifyPersonalMessageSignature } from "@mysten/sui/verify";
 import type {
   DurableObjectState,
   DurableObjectNamespace,
@@ -81,6 +83,82 @@ export class Sponsor {
     const b = (await req.json()) as any;
     const route = new URL(req.url).pathname;
     const store = this.ctx.storage;
+    // Legacy sample mints are deliberately closed. A verified original and
+    // matching, reviewed asset pair are prerequisites for the replacement mint.
+    if (route === "/prepare" || route === "/execute")
+      return Response.json(
+        {
+          error:
+            "Original Prime Machin ownership and matching artwork are required. The sample mint is closed.",
+        },
+        { status: 409 },
+      );
+    if (route === "/ownership/challenge") {
+      if (!validAddress(b.owner) || !validAddress(b.objectId))
+        throw Error("Select an original Prime Machin.");
+      const day = new Date().toISOString().slice(0, 10),
+        rateKey =
+          "ownership-rate:" + day + ":" + req.headers.get("x-client-ip");
+      const attempts = (await store.get<number>(rateKey)) || 0;
+      if (attempts >= 30) throw Error("Too many verification attempts today.");
+      await store.put(rateKey, attempts + 1);
+      const source = await verifyPrime(b.owner, b.objectId);
+      const id = crypto.randomUUID(),
+        expires = Date.now() + 300000;
+      const message = [
+        "Nozomi — verify my Prime Machin",
+        "Site: https://gabeperez.github.io/nozomi-mascot/test/",
+        "Network: Sui mainnet (read-only)",
+        "Wallet: " + b.owner,
+        "Original NFT: " + b.objectId,
+        "Prime Machin #" + source.number,
+        "Purpose: verify ownership and save this NFT as the source for avatar and full-body artwork.",
+        "This does not transfer NFTs, spend funds, or authorize future transactions.",
+        "Expires: " + new Date(expires).toISOString(),
+        "Nonce: " + id,
+      ].join("\n");
+      await store.put("ownership-challenge:" + id, {
+        owner: b.owner,
+        objectId: b.objectId,
+        message,
+        expires,
+      });
+      return Response.json({ id, message, source });
+    }
+    if (route === "/ownership/verify") {
+      if (
+        typeof b.id !== "string" ||
+        typeof b.signature !== "string" ||
+        b.signature.length > 12000
+      )
+        throw Error("Invalid verification.");
+      const record = await store.get<{
+        owner: string;
+        objectId: string;
+        message: string;
+        expires: number;
+      }>("ownership-challenge:" + b.id);
+      if (!record || record.expires < Date.now())
+        throw Error("Verification expired. Please try again.");
+      await verifyPersonalMessageSignature(
+        new TextEncoder().encode(record.message),
+        b.signature,
+        { address: record.owner, client: mainnet },
+      );
+      const source = await verifyPrime(record.owner, record.objectId);
+      await store.delete("ownership-challenge:" + b.id);
+      // Source metadata comes only from the canonical chain read, never the request.
+      const receipt = {
+        owner: record.owner,
+        source,
+        verifiedAt: new Date().toISOString(),
+        status: "awaiting_artwork",
+        avatar: null,
+        fullBody: null,
+      };
+      await store.put("render-source:" + source.objectId, receipt);
+      return Response.json(receipt);
+    }
     const signer = Ed25519Keypair.fromSecretKey(this.env.SPONSOR_KEY.trim());
     await guard();
     if (route === "/prepare") {
