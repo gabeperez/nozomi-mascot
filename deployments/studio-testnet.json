@@ -1,0 +1,14 @@
+{
+  "network": "testnet",
+  "package": "0x4358b69eb42b7fb1f11d9eb839723e3cc1f6cdb9b6528744e25c198c0da9b0c0",
+  "studio": "0xd23656ce60c4624aa91e8a1417abb34e90d1776701299e2c395c731cd1bbb42f",
+  "character": {
+    "id": "0x2e5618a44e46e08d014c367006d3c4b51bc01921894f96d1a26b536342a4fbcb",
+    "name": "Mochi",
+    "palette": 3,
+    "unlocked": true
+  },
+  "claimDigest": "M2KJkdW2Dj8m1tvkZisshsVciD5MUpYvVC5GRrn67ss",
+  "unlockDigest": "GvGGeTExJ8dutyboHkx1wwR4RPLeNCwzjrAuKbo8RPtf",
+  "verifiedAt": "2026-09-16T01:39:11.946Z"
+}
