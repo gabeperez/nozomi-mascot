@@ -39,3 +39,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 *.keystore.aliases
 exploration/prime-machin-source/
 deployments/testnet-publish.json
+
+# Generated Walrus staging files and Worker local state
+walrus-home/
+.wrangler/

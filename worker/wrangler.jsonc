@@ -1,0 +1,10 @@
+{
+ "name":"nozomi-testnet-sponsor",
+ "main":"index.ts",
+ "account_id":"1be5e8b0e95f6466ce392e3be13d816b",
+ "compatibility_date":"2026-09-16",
+ "compatibility_flags":["nodejs_compat"],
+ "workers_dev":true,
+ "durable_objects":{"bindings":[{"name":"SPONSOR","class_name":"Sponsor"}]},
+ "migrations":[{"tag":"v1","new_sqlite_classes":["Sponsor"]}]
+}

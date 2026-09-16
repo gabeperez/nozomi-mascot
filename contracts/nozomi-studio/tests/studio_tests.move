@@ -51,3 +51,19 @@ fun duplicate_claim() {
     test_scenario::return_shared(studio);
     s.end();
 }
+
+#[test]
+fun create_personalizes_atomically() {
+    let mut s = test_scenario::begin(@0xA);
+    studio::init_for_testing(s.ctx());
+    s.next_tx(@0xB);
+    let mut studio = test_scenario::take_shared<Studio>(&s);
+    let payment = coin::mint_for_testing(10000000, s.ctx());
+    studio::create(&mut studio, std::string::utf8(b"Nori"), 3, payment, s.ctx());
+    test_scenario::return_shared(studio);
+    s.next_tx(@0xB);
+    let character = s.take_from_sender<TestCharacter>();
+    assert!(studio::unlocked(&character), 97);
+    test_scenario::return_to_sender(&s, character);
+    s.end();
+}

@@ -1,0 +1,52 @@
+{
+  "network": "testnet",
+  "siteObject": "0xa415bafe75abd3ed12890419554ca8c036615b2c2e6650bf41f5d0772025d567",
+  "storageEpochs": 30,
+  "publishedAt": "2026-09-16",
+  "resources": {
+    "/assets/config-15KPMfbS.js": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBAQCIAA",
+      "sha256": "3d91229459f9bc55263ad45e31b43ccb6254843106fac86b30cc388fa5e11862"
+    },
+    "/assets/home-BAc8Wk33.css": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBiACKAA",
+      "sha256": "384400f1d48a589c04379343796ffcef97fc969dd132d4f45b2454efbeb30b73"
+    },
+    "/assets/home-CVK12dtS.js": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBigCMAA",
+      "sha256": "5450342f2d5b7356b1ec92fa5a4a337a2396984505e18c3dc3c53b7d89c7bbd7"
+    },
+    "/assets/main-BDZYB-Rv.js": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBjACNAA",
+      "sha256": "e8bd3645f59766bc54e352fa2cea58677a1033e821f2906438f199c541dc5a75"
+    },
+    "/assets/main-CiDSbjMN.css": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBjQCOAA",
+      "sha256": "07a788f5acd4f4b8c807143f5903881db06a1e3718948a145c5ebdcc2a6716c0"
+    },
+    "/assets/mascot-CbSYQ55G.js": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBjgD-AA",
+      "sha256": "24978ceb102be12fa970080944caccd8110ac151d3a86c9f5e3369ec8f4f1ab4"
+    },
+    "/assets/test-BIyi9JNU.css": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcB_gABAQ",
+      "sha256": "5295d9968794d66973964b63129f3663c739028b534cb87098a56e9a21b1da2d"
+    },
+    "/assets/test-ClXoRX5l.js": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBAQGCAQ",
+      "sha256": "31ae1605c1cfe7266ffe4a9d747422d083b1985de0a4e4f71fd748d3e3adea09"
+    },
+    "/index.html": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBggGDAQ",
+      "sha256": "d2a3e073b57c44a6d38967d008ed3160f8363eebebdba94c458692775d64299d"
+    },
+    "/mascots/nozomi-directions.webp": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcBgwHdAQ",
+      "sha256": "be449d79649b30ad80a4e972c54e98bc204aebc7f8b780e24250edf8d15f1bd9"
+    },
+    "/mascots/nozomi-reactions.webp": {
+      "patch": "QTdxcisuzV4GanJeFORQ-d2gyJPM7dipVl8BM14cpLcB3QEyAg",
+      "sha256": "729e70eb8d70aed330ce66675e553f4871de2b4cc1fadb4620a74151d8978a39"
+    }
+  }
+}

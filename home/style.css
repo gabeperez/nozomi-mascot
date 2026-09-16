@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@1,500&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background: #faf8f2;
+  color: #35473c;
+}
+main {
+  min-height: 100vh;
+  background: var(--room);
+  padding: 32px 6vw;
+  transition:
+    background 1s,
+    color 1s;
+}
+a {
+  color: inherit;
+  text-underline-offset: 5px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+header > a {
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header > a span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.status {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #799773;
+}
+.room {
+  max-width: 780px;
+  margin: 60px auto 50px;
+  text-align: center;
+  position: relative;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(30px, 5vw, 55px);
+  margin: 20px 0 0;
+  overflow-wrap: anywhere;
+}
+.window {
+  position: absolute;
+  z-index: 0;
+  top: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 260px;
+  border-radius: 130px 130px 0 0;
+  background: #ffffff55;
+  border: 10px solid #ffffff45;
+  overflow: hidden;
+}
+.sun {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: #f7d48b;
+  border-radius: 50%;
+  top: 40px;
+  right: 36px;
+  box-shadow: 0 0 70px #f7d48b80;
+}
+.horizon {
+  position: absolute;
+  width: 350px;
+  height: 180px;
+  background: #b4c9a75c;
+  border-radius: 50%;
+  top: 160px;
+  left: -40px;
+}
+.friend {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.greeting {
+  font-size: 16px;
+  margin: 18px 0 26px;
+  min-height: 22px;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+button {
+  font: inherit;
+  font-size: 12px;
+  color: inherit;
+  border: 1px solid #75817135;
+  border-radius: 30px;
+  padding: 13px 22px;
+  background: #ffffff70;
+  cursor: pointer;
+}
+button:hover {
+  background: #fff;
+}
+.note {
+  font-size: 10px;
+  line-height: 1.8;
+  opacity: 0.6;
+  margin-top: 25px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid #75817130;
+  padding-top: 24px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+footer span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  margin-bottom: 7px;
+}
+footer p {
+  opacity: 0.7;
+}
+.quiet {
+  background: #263b42;
+  color: #e2e9dc;
+}
+.quiet .window {
+  background: #39505b;
+  border-color: #ffffff12;
+}
+.quiet .sun {
+  background: #e4e7ca;
+  box-shadow: 0 0 60px #d5e1d62b;
+}
+.quiet button {
+  background: #ffffff10;
+}
+.quiet .friend {
+  filter: brightness(0.88);
+}
+.empty {
+  text-align: center;
+  margin: 20vh auto;
+  max-width: 550px;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #7ca28a;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 22px;
+  }
+  .room {
+    margin-top: 50px;
+  }
+  .window {
+    top: 115px;
+    width: 210px;
+  }
+  .greeting {
+    font-size: 14px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .status {
+    font-size: 9px;
+  }
+  .friend {
+    margin-top: 45px;
+  }
+  .actions button {
+    padding: 13px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

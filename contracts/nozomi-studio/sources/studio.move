@@ -43,7 +43,7 @@ fun init(ctx: &mut TxContext) {
     });
 }
 
-public fun claim(studio: &mut Studio, ctx: &mut TxContext) {
+fun new_character(studio: &mut Studio, ctx: &mut TxContext): TestCharacter {
     let holder = ctx.sender();
     assert!(!studio.claimed.contains(holder), EAlreadyClaimed);
     studio.claimed.add(holder, true);
@@ -53,7 +53,19 @@ public fun claim(studio: &mut Studio, ctx: &mut TxContext) {
         unlocked: false, template_version: 1,
     };
     event::emit(Claimed { character_id: object::id(&character), holder });
-    transfer::public_transfer(character, holder);
+    character
+}
+
+public fun claim(studio: &mut Studio, ctx: &mut TxContext) {
+    let character = new_character(studio, ctx);
+    transfer::public_transfer(character, ctx.sender());
+}
+
+// One confirmation can create and personalize the character atomically.
+public fun create(studio: &mut Studio, name: String, palette: u8, payment: Coin<SUI>, ctx: &mut TxContext) {
+    let mut character = new_character(studio, ctx);
+    unlock(studio, &mut character, name, palette, payment, ctx);
+    transfer::public_transfer(character, ctx.sender());
 }
 
 public fun unlock(

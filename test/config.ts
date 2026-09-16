@@ -1,9 +1,10 @@
 import { SuiGrpcClient } from "@mysten/sui/grpc";
 export const PACKAGE =
-  "0x4358b69eb42b7fb1f11d9eb839723e3cc1f6cdb9b6528744e25c198c0da9b0c0";
+  "0x9d4d5042fb9b44a5f93c46ad327b3ef61778b9eb6e55fdf6775b634e27bfdcf1";
 export const STUDIO =
   "0xd23656ce60c4624aa91e8a1417abb34e90d1776701299e2c395c731cd1bbb42f";
-export const TYPE = `${PACKAGE}::studio::TestCharacter`;
+export const TYPE =
+  "0x4358b69eb42b7fb1f11d9eb839723e3cc1f6cdb9b6528744e25c198c0da9b0c0::studio::TestCharacter";
 export const client = new SuiGrpcClient({
   network: "testnet",
   baseUrl: "https://fullnode.testnet.sui.io:443",

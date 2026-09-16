@@ -1,3 +1,4 @@
+import { NativeStudio } from "./native";
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -357,6 +358,15 @@ function App() {
                   onFocus={(e) => e.target.select()}
                 />
               )}
+              <a
+                className="primary home-link"
+                href={
+                  "https://nozomi-homes.perez-jg22.workers.dev/?id=" +
+                  character.id
+                }
+              >
+                Visit your companion’s home →
+              </a>
               <p className="small">
                 Website kit includes sprite sheets, CSS, JavaScript, GIF, and
                 your character record.
@@ -519,7 +529,11 @@ createRoot(document.getElementById("root")!).render(
     <Embedded id={embed} />
   ) : (
     <DAppKitProvider dAppKit={kit}>
-      <App />
+      {new URLSearchParams(location.search).has("wallet") ? (
+        <App />
+      ) : (
+        <NativeStudio />
+      )}
     </DAppKitProvider>
   ),
 );
